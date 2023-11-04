@@ -1,0 +1,12 @@
+{
+  "name": "@project-aegis/product-manager",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "tsconfig": "workspace:*"
+  }
+}
