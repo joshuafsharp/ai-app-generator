@@ -5,10 +5,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
-  "type": "module",
   "workspaces": ["packages/*"],
-  "devDependencies": {
-    "bun-types": "latest",
+  "dependencies": {
     "typescript": "^5.2.2"
   }
 }
