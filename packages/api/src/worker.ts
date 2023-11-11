@@ -1,9 +1,17 @@
+import * as productManagerJobs from "@project-aegis/product-manager/src/jobs"
+
 declare var self: Worker;
 
+export interface WorkerEvent {
+    type: productManagerJobs
+}
+
+
 const workerURL = new URL("worker.ts", import.meta.url).href;
-const worker = new Worker(workerURL);
+export const worker = new Worker(workerURL);
 
 worker.postMessage("hello");
-worker.onmessage = event => {
+
+worker.onmessage<> = event => {
   console.log(event.data);
 };

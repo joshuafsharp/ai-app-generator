@@ -1,6 +1,6 @@
 {
   "name": "@project-aegis/product-manager",
-  "module": "src/index.ts",
+  "main": "src/index.ts",
   "dependencies": {
     "elysia": "latest"
   },
