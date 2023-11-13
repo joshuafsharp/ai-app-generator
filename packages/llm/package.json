@@ -1,4 +1,8 @@
 {
   "name": "@project-aegis/llm",
-  "module": "index.ts"
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    "bun": "./src/index.ts"
+  }
 }

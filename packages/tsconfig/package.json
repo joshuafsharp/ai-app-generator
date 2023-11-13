@@ -2,5 +2,9 @@
   "name": "@project-aegis/tsconfig",
   "version": "0.0.0",
   "private": true,
-  "module": "tsconfig.json"
+  "type": "module",
+  "main": "./tsconfig.json",
+  "exports": {
+    "bun": "./tsconfig.json"
+  }
 }

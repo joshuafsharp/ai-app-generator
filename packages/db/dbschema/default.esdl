@@ -1,5 +1,4 @@
 module default {
-    scalar type CompletionStatus extending enum<ToDo, Doing, Done>;
 
     abstract type DateTime {
         required created: datetime {
@@ -37,10 +36,12 @@ module default {
         # TODO: Tasks
     }
 
+    scalar type CompletionStatus extending enum<ToDo, Doing, Done>;
+
     type Epic extending DateTime {
         required title: str;
         required description: str;
-        points: int;
+        points: int16;
         required status: CompletionStatus;
 
         multi stories: UserStory {
@@ -48,15 +49,18 @@ module default {
         };
     }
 
+    scalar type Priority extending enum<Low, Medium, High>;
+
+
     type UserStory extending DateTime {
         required description: str;
         required user_type: str; # eg user, admin etc
         required action: str;
         required benefit: str;
 
-        points: int;
+        points: int16;
         required status: CompletionStatus;
-        required priority: enum<Low, Medium, High>;
+        required priority: Priority;
         
         epic := .<stories[is Epic];
     }
