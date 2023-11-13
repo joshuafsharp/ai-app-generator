@@ -1,0 +1,14 @@
+{
+  "name": "@project-aegis/worker",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    "bun": "./src/index.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
