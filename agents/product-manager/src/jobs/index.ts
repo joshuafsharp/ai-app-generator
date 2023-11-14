@@ -1,1 +1,1 @@
-export * from "./process-requirements"
+export * from "./process-requirements";
