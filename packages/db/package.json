@@ -1,9 +1,9 @@
 {
   "name": "@project-aegis/db",
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./",
   "exports": {
-    "bun": "./src/index.ts"
+    "bun": "./"
   },
   "dependencies": {
     "edgedb": "^1.4.1"
