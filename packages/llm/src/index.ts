@@ -1,11 +1,15 @@
 import { ModelServerAdapter } from "./adapters";
-import { OllamaClient } from "./adapters/ollama";
+import { OllamaClient, OllamaModelType } from "./adapters/ollama";
 
 export class ModelServerAdapterFactory {
-  static createAdapter(type: string, baseUrl?: string): ModelServerAdapter {
+  static createAdapter(
+    type: string,
+    model: OllamaModelType,
+    baseUrl?: string
+  ): ModelServerAdapter {
     switch (type) {
       case "ollama":
-        return new OllamaClient(baseUrl ?? "http://localhost:11434");
+        return new OllamaClient(baseUrl ?? "http://localhost:11434", model);
 
       // case 'openai': return new OpenAIAdapter();
       // case 'googlebard': return new GoogleBardAdapter();

@@ -2,7 +2,7 @@ import { Ollama } from "langchain/llms/ollama";
 
 import { ModelServerAdapter } from ".";
 
-type OllamaModelType =
+export type OllamaModelType =
   | "phind-codellama"
   | "codebooga"
   | "mistral-7b"
