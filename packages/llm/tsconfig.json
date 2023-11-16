@@ -1,0 +1,9 @@
+{
+  "extends": "@project-aegis/tsconfig",
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  }
+}
