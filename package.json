@@ -12,7 +12,8 @@
   ],
   "dependencies": {
     "langchain": "^0.0.189",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   },
   "devDependencies": {
     "eslint": "^8.53.0",

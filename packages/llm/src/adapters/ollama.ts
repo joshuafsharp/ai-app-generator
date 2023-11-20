@@ -18,8 +18,14 @@ export class OllamaClient implements ModelServerAdapter {
     this.ollama = new Ollama({ baseUrl: this.baseUrl, model });
   }
 
-  async queryModel(modelName: string, prompt: string): Promise<string> {
-    const response = await this.ollama.queryModel(modelName, prompt);
-    return response;
+  async queryModel(prompt: string): Promise<string> {
+    const stream = await this.ollama.stream(prompt);
+
+    const chunks = [];
+    for await (const chunk of stream) {
+      chunks.push(chunk);
+    }
+
+    return chunks.join("");
   }
 }
