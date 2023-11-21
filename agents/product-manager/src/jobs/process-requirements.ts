@@ -1,8 +1,20 @@
-export interface ProjectOverview {
+import { AgentType, JobHandler } from "@project-aegis/worker";
+
+export interface JobData {
   name: string;
   description: string;
 }
 
-export function createUserStories(overview: ProjectOverview) {
-  // TODO: Take project name and overview as input and ask for a set of user stories from the LLM
+export class ProcessRequirements implements JobHandler<JobData> {
+  llmClient: ModelServerAdapter;
+
+  agentType: AgentType = "product-manager";
+
+  constructor(llmClient: ModelServerAdapter) {
+    this.llmClient = llmClient;
+  }
+
+  start(jobData: JobData) {
+    // TODO: Create user stories from requirements
+  }
 }

@@ -6,6 +6,8 @@
     "bun": "./src/index.ts"
   },
   "dependencies": {
+    "@project-aegis/worker": "workspace:*",
+    "bee-queue": "^1.7.1",
     "elysia": "latest"
   },
   "devDependencies": {
