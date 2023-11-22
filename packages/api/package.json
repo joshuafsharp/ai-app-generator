@@ -6,8 +6,9 @@
     "bun": "./src/index.ts"
   },
   "dependencies": {
-    "@project-aegis/product-manager": "workspace:*",
-    "@project-aegis/db": "workspace:*"
+    "@project-aegis/db": "workspace:*",
+    "@project-aegis/llm": "workspace:*",
+    "@project-aegis/product-manager": "workspace:*"
   },
   "devDependencies": {
     "@project-aegis/tsconfig": "workspace:*",

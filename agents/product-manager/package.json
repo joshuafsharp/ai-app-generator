@@ -6,12 +6,16 @@
     "bun": "./src/index.ts"
   },
   "dependencies": {
+    "@project-aegis/db": "workspace:*",
+    "@project-aegis/llm": "workspace:*",
     "@project-aegis/worker": "workspace:*",
     "bee-queue": "^1.7.1",
     "elysia": "latest"
   },
   "devDependencies": {
     "@project-aegis/tsconfig": "workspace:*",
-    "bun-types": "latest"
+    "@project-aegis/api": "workspace:*",
+    "bun-types": "latest",
+    "edgedb": "^1.4.1"
   }
 }
